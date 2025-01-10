@@ -2,26 +2,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { LINKS } from "@/static";
+import { ILink } from "@/types";
 
-interface ILink {
-  path: string;
-  title: string;
-}
-
-const LINKS: ILink[] = [
-  {
-    path: "/",
-    title: "home",
-  },
-  {
-    path: "/about",
-    title: "about",
-  },
-  {
-    path: "/product",
-    title: "product",
-  },
-];
 
 const Header = () => {
   const pathname = usePathname();
